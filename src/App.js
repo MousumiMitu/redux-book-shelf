@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import Discover from "./pages/Discover";
 import FinishedBooks from "./pages/FinishedBooks";
-import FinishedList from "../src/components/Book/FinishedList";
 import ReadingList from "./pages/ReadingList";
 import { AuthProvider, PrivateRoute } from "./lib/auth";
 import React, { Component } from "react";
