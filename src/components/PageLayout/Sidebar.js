@@ -6,6 +6,9 @@ const Sidebar = () => {
   const readingListLength = useSelector((state) => {
     return state.books.readingList.length;
   });
+  const finishedListLength = useSelector((state) => {
+    return state.books.finishList.length;
+  });
   return (
     <div className="col-md-3">
       <ul className="list-group sticky-top  py-2">
@@ -17,7 +20,10 @@ const Sidebar = () => {
           <span className="badge badge-sm bg-primary">{readingListLength}</span>
         </NavLink>
         <NavLink as="li" className="list-group-item" to="/finish">
-          Finished Books <span className="badge badge-sm bg-primary">0</span>
+          Finished Books{" "}
+          <span className="badge badge-sm bg-primary">
+            {finishedListLength}
+          </span>
         </NavLink>
       </ul>
     </div>

@@ -5,6 +5,7 @@ import styles from "./book.module.css";
 import {
   addToReadingList,
   removeFromReadingList,
+  addToFinishedList,
 } from "../../Redux/Action/bookAction";
 const SingleBook = (props) => {
   const { title, author, coverImageUrl, synopsis, id } = props.book;
@@ -34,7 +35,11 @@ const SingleBook = (props) => {
           onClick={() => dispatch(addToReadingList(props.book))}
           className={styles.plus_icon}
         />
-        {/* <HiCheckCircle title="Mark as Finish" className={styles.check_icon} /> */}
+        <HiCheckCircle
+          title="Mark as Finish"
+          onClick={() => dispatch(addToFinishedList(props.book))}
+          className={styles.check_icon}
+        />
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ const bookReducer = (state = initialState, action) => {
     case "ADD_TO_FINISHED_LIST": {
       const newState = {
         ...state,
-        finishList: [...state.readingList, action.payload],
+        finishList: [...state.finishList, action.payload],
       };
       return newState;
     }
